@@ -1,0 +1,56 @@
+
+.datepicker {
+    /* blanco */
+    background: #FFFFFF;
+  
+    /* input shadow */
+    box-shadow: 0px 1px 5px rgba(248, 245, 245, 0.15);
+    border-radius: 5px;
+    height: 40px;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* margin: 0 10px 0 10px; */
+    padding-left: 10px;
+    width: 96%;
+}
+
+.react-datepicker-wrapper {
+    width: auto;
+    flex: 2;
+
+}
+
+.input {
+    width: 392px;
+}
+
+.cities{
+    flex: 2;
+}
+
+@media (max-width: 426px) {
+    .cities {
+        width: 268px;
+        padding: 2px;
+    }
+    .react-datepicker-wrapper {
+        width: 268px;
+        padding: 2px;
+
+    }
+  }
+
+  @media (min-width: 768px) {
+    .cities {
+        width: 320px;
+        padding: 2px;
+    }
+    .react-datepicker-wrapper {
+        width: 268px;
+        padding: 2px;
+
+    }
+  }

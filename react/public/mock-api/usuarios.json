@@ -1,0 +1,20 @@
+[
+    {
+        "nombre":"carolina",
+        "apellido": "porras",
+        "email":"carop@google.com",
+        "password":"caro123"
+    },
+    {
+        "nombre":"angela",
+        "apellido": "lizarazo",
+        "email":"angela@google.com",
+        "password":"ang345"
+    },
+    {
+        "nombre":"tomas",
+        "apellido": "arrinda",
+        "email":"tomas@google.com",
+        "password":"tom456"
+    }
+]

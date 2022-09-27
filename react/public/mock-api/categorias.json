@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "imgUrl": "https://www.actualidadmotor.com/wp-content/uploads/2017/06/Mercedes-Benz-SL-1024x640.jpg.webp",
+        "title": "Lujo",
+        "description": "1200 autos"
+    },
+    {
+        "id": 2,
+        "imgUrl": "https://www.actualidadmotor.com/wp-content/uploads/2022/02/prueba-seat-arona-fr-8-1024x614.jpg.webp",
+        "title": "Economico",
+        "description": "1420 autos"
+    },
+    {
+        "id": 3,
+        "imgUrl": "https://www.actualidadmotor.com/wp-content/uploads/2022/04/Ferrari-296-GTS-Assetto-Fiorano-0.jpg",
+        "title": "Deportivo",
+        "description": "1580 autos"
+    }
+]

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+:root {
+  --primary-color: #64A8BA;
+  --secundary-color: #041F2C;
+  --gray-one: #b2b2b2;
+  --text-color: #F6F0F4;
+  --blue-color:#00008b;
+  --backgroud: linear-gradient(145deg, #041F2C, #64A8BA);
+}
+
+body {
+  font-family: 'Roboto';
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 426px) {
+  .react-datepicker {
+    margin: 0 20px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .react-datepicker {
+    margin: 0 20px;
+  }
+  
+}

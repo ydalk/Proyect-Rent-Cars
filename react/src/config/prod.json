@@ -1,0 +1,14 @@
+{
+    "API_URL": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080",
+    "API_PATH_CATEGORIAS_AUTOS": "/categories",
+    "API_PATH_CARS": "/products",
+    "API_PATH_CITIES": "/cities",
+    "API_PATH_IMAGES": "/images",
+    "API_PATH_FEATURES": "/features",
+    "API_PATH_PROD_FEAT": "/productFeature",
+    "API_PATH_RESERVATION": "/reservation",
+    "API_PATH_USERS": "/user",
+    "API_PATH_AUTH": "/auth/token",
+    "API_PATH_FILTER_BY_PRODUCT_ID": "/reservation/productFilter",
+    "API_PATH_FILTER_BY_USER_ID": "/reservation/userFilter"
+}

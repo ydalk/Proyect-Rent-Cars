@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Medellin",
+      "id": 1
+    },
+
+    {
+        "name": "Cali",
+        "id": 2
+    },
+
+    {
+        "name": "Neiva",
+        "id": 3
+    },
+
+    {
+      
+      "name": "Santa Marta",
+        "id": 4
+    },
+
+    {
+      "name": "Bogotá",
+      "id": 5
+    }
+  ]
+  

@@ -1,0 +1,312 @@
+{
+	"id": "34041231-38b1-48cf-9779-981dae1bfee1",
+	"name": "categoryCars",
+	"timestamp": "2022-08-25T17:21:54.072Z",
+	"collection_id": "17755771-a982768a-b68d-4d5a-a767-d5f0f7af8c9d",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 13,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "2cc603ca-3621-47c7-b515-48690831043a",
+			"name": "Get all",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/categories",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "44db0e6d-c986-40c5-95d4-13738a3496ec",
+			"name": "Get By Id",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/categories/1",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "65f0f5e6-cf98-4812-9283-c0839aa503df",
+			"name": "Get all",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/cities",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f69fb1f0-8fe7-4a6e-9061-e4e51edf1722",
+			"name": "Get by id",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/cities/1",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9ba9d1c4-5063-4f6b-8efa-fc7a1b9a9251",
+			"name": "Get all",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/features",
+			"time": 127,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				127
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "2e90cc13-5735-4083-ae33-7ff3d6239ac4",
+			"name": "Update feature",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/features/update/1",
+			"time": 119,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Successful UPDATE request": false
+			},
+			"testPassFailCounts": {
+				"Successful UPDATE request": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Successful UPDATE request": false
+				}
+			]
+		},
+		{
+			"id": "17557ae7-15d6-4fc7-a78e-88ddcaebd940",
+			"name": "Get by id",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/features/1",
+			"time": 241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				241
+			],
+			"allTests": [
+				{
+					"Test data type of the response": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5f5e274c-11be-4676-a61f-6fd8471d9151",
+			"name": "get all",
+			"url": "http://ec2-18-118-11-217.us-east-2.compute.amazonaws.com:8080/images",
+			"time": 234,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test data type of the response": false,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Test data type of the response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Test data type of the response": false,
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1392,
+	"collection": {
+		"requests": [
+			{
+				"id": "2cc603ca-3621-47c7-b515-48690831043a",
+				"method": "GET"
+			},
+			{
+				"id": "44db0e6d-c986-40c5-95d4-13738a3496ec",
+				"method": "GET"
+			},
+			{
+				"id": "65f0f5e6-cf98-4812-9283-c0839aa503df",
+				"method": "GET"
+			},
+			{
+				"id": "f69fb1f0-8fe7-4a6e-9061-e4e51edf1722",
+				"method": "GET"
+			},
+			{
+				"id": "9ba9d1c4-5063-4f6b-8efa-fc7a1b9a9251",
+				"method": "GET"
+			},
+			{
+				"id": "2e90cc13-5735-4083-ae33-7ff3d6239ac4",
+				"method": "PUT"
+			},
+			{
+				"id": "17557ae7-15d6-4fc7-a78e-88ddcaebd940",
+				"method": "GET"
+			},
+			{
+				"id": "5f5e274c-11be-4676-a61f-6fd8471d9151",
+				"method": "GET"
+			},
+			{
+				"id": "e2ef6257-7060-4bba-9dea-ac16144467c5",
+				"method": "PUT"
+			}
+		]
+	}
+}

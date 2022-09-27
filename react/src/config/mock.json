@@ -1,0 +1,10 @@
+{
+    "API_URL": "",
+    "API_PATH_CATEGORIAS_AUTOS": "mock-api/categorias.json",
+    "API_PATH_CARS": "mock-api/cars.json",
+    "API_PATH_CITIES": "mock-api/cities.json",
+    "API_PATH_IMAGES": "mock-api/images.json",
+    "API_PATH_FEATURES": "mock-api/features.json",
+    "API_PATH_PROD_FEAT": "mock-api/product_feature.json"
+
+}
