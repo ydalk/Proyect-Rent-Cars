@@ -1,22 +1,27 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import configEnvironment from "../../config/config.json";
 import { usePostUser } from '../../helpers/usePostUser';
-import { Form, Input, Label, Wrapper, Button, Title, MsgError } from './RegLogStyled';
+import { useForm } from '../../hooks/useForm';
+import { Form, Input, Label, Wrapper, Button, Title, MsgError, Must } from './RegLogStyled';
 
 export const Register = () => {
   
+  
   const {postUser} = usePostUser();
   const [err, setErr] = useState('');
-  const [formState, setFormState] = useState({
-    name:''
-  });
   const [passConf, setPassConf] = useState('');
-  
-  
   const {confirmPass} = passConf; 
-  const { name, lastName, cityUser, email, password} = formState;
+  
 
+  const {formState, onInputChange, name, lastName, cityUser, email, password} = useForm({
+    name : '', 
+    lastName : '',
+    cityUser : '',
+    email : '',
+    password : '',
+  });
 
   const handledPassword = ({ target })=>{
 
@@ -25,14 +30,7 @@ export const Register = () => {
     });
   }
   
-  const handleInputChange = ({ target }) => {
-    setFormState({
-      ...formState,
-        [ target.name ]: target.value,
-      });
-  }
-    
-
+ 
   const validatePass = (e)=>{
     e.preventDefault();
 
@@ -72,10 +70,15 @@ export const Register = () => {
     fetch(url, settings)
       .then(respuesta => respuesta.json())
       .then( data => {
-
         setTimeout(function(){
-          postUser(settings, email, password);
-        }, 1000);
+        Swal.fire({
+          title: "¡Bienvenido!",
+          text: "Su registro se ha realizado con éxito",
+          icon: "success",
+        }).then((result) => {          
+            postUser(settings, email, password);          
+        });
+      }, 1000);        
        
       })
         .catch( e => {
@@ -84,8 +87,7 @@ export const Register = () => {
   } 
 
   
-  useEffect(() => {    
-    
+  useEffect(() => { 
   }, [])
 
 
@@ -96,52 +98,52 @@ export const Register = () => {
 
       <Form onSubmit={validatePass}>
 
-          <Label>Nombre</Label>
+          <Label>Nombre <Must>*</Must></Label>
           <Input 
             placeholder=' Nombre' 
             type='text'
             name='name'
             value={ name }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
-          <Label>Apellido</Label>
+          <Label>Apellido <Must>*</Must></Label>
           <Input 
             placeholder=' Apellido'
             type='text'
             name='lastName'
             value={ lastName }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
-          <Label>Ciudad</Label>
+          <Label>Ciudad <Must>*</Must></Label>
           <Input 
             placeholder=' Ciudad'
             type='text'
             name='cityUser'
             value={ cityUser }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
-          <Label>Correo Electrónico</Label>
+          <Label>Correo Electrónico <Must>*</Must></Label>
           <Input 
             placeholder=' Correo electronico'
             type='email'
             name='email'
             value={ email }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
-          <Label>Contraseña</Label>
+          <Label>Contraseña <Must>*</Must></Label>
           <Input 
             placeholder=' Contraseña'
             type='password'
             name='password'
             value={ password }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
-          <Label>Confirmar Contraseña</Label>
+          <Label>Confirmar Contraseña <Must>*</Must> </Label>
           <Input 
             placeholder=' Confirmar Contraseña'
             type='password'

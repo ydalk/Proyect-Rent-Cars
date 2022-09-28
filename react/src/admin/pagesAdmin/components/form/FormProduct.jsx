@@ -7,10 +7,13 @@ import { FormImages } from './FormImages';
 import check from '../../../../assets/images/check.png';
 import { Form, Input, Label, Wrapper, Button, Title, Close, Select, Textarea, Option, Icon, FormImg } from './FormProductStyle';
 import { Formfeature } from './FormFeature';
+import { fetchAPI } from '../../../../helpers/fetch-api';
+import { AutofpsSelectOutlined } from '@mui/icons-material';
 
 export const FormProduct = ({confirmData}) => {
 
     const data = false;
+    const { get } = fetchAPI();
     const navigate = useNavigate();
     const [err, setErr] = useState('');
     const [idAct, setIdAct] = useState(0);
@@ -20,7 +23,6 @@ export const FormProduct = ({confirmData}) => {
     const [showModalImg, setShowModalImg] = useState(false);
     const { cat } = useContext(CatContext);
     const { cities } = useContext(CityContext);
-    const {cars, getDataCar} = useContext(ProductContext);
 
     const [ carsNew, setCarsNew] = useState();
 
@@ -81,31 +83,34 @@ export const FormProduct = ({confirmData}) => {
           'Accept': "application/json",
         }
       } 
-      postData(settings);
-      getDataCar();
-      const obtaninId = ()=> {
-        const last = cars.pop();
-        setIdAct(last.id + 1);
-      }
-      
-      setTimeout(function(){
-        obtaninId();        
-      }, 2000);
+      postData(settings);      
     }
-
-    
-
-    
 
     const postData = async (settings) => {
       let path = configEnvironment.API_PATH_CARS + '/new';
       let url = configEnvironment.API_URL + path;
       fetch(url, settings)
         .then(respuesta => respuesta.json())
+        .then(() => getDataCar())
         .catch( e => {
           console.log("Error escuchando la promesa.");
         })        
     } 
+
+    const getDataCar = async () => {
+      const autos = await get(configEnvironment.API_PATH_CARS)
+      setCarsNew(autos);
+      setTimeout(() => {
+        obtaninId();
+      }, 1500);
+    } 
+    console.log(carsNew);
+    
+    const obtaninId = ()=> {
+      const last = carsNew[carsNew.length];
+      setIdAct(last.id);
+      console.log(last);
+    }
 
     const guardar = () => {            
       Swal.fire({
@@ -134,7 +139,7 @@ export const FormProduct = ({confirmData}) => {
           confirmData(data)
         }
       });
-  };
+    };
 
   return (
     <>

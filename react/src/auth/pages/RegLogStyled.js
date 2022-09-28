@@ -59,3 +59,9 @@ export const MsgError = styled.span `
     font-weight: 500;
 
 `;
+
+export const Must = styled.span `
+    color: red;
+
+`;
+

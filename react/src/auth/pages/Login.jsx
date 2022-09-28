@@ -1,32 +1,24 @@
 import React, {  useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Input, Label, Wrapper, Button, Title, MsgError } from './RegLogStyled';
+import { Form, Input, Label, Wrapper, Button, Title, MsgError, Must } from './RegLogStyled';
 import { usePostUser } from '../../helpers/usePostUser';
+import { useForm } from '../../hooks/useForm';
 
 export const Login = () => {
   
   
   const {postUser, error} = usePostUser();
   
-  const [formState, setFormState] = useState({
+  const {formState, onInputChange, onResetForm, email, password} = useForm({
     email: '',
     password: '',
   });
 
-  const { email, password } = formState;
-
- 
-  const handleInputChange = ({ target }) => {
-    setFormState({
-      ...formState,
-        [ target.name ]: target.value,
-      });
-      
-    }
-      
+     
   const handlerSubmit = (e) =>{
       e.preventDefault();
       getUser();
+      onResetForm();
   }
 
 
@@ -58,24 +50,24 @@ export const Login = () => {
 
       <Form onSubmit={handlerSubmit}>
 
-          <Label>Correo Electrónico</Label>
+          <Label>Correo Electrónico <Must>*</Must></Label>
           <Input 
             placeholder=' Correo electronico'
             type='email'
             name='email'
             value={ email }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
 
           />
-          <Label htmlFor="password">Contraseña</Label>
+          <Label htmlFor="password">Contraseña <Must>*</Must></Label>
           <Input 
             id='password'
             placeholder=' ********'
             type='password'
             name='password'
             value={ password }
-            onChange={ handleInputChange }
+            onChange={ onInputChange }
             required
           />
           <Button id="ingresar" type='submit'>Ingresar</Button>
